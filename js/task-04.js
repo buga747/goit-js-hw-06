@@ -1,10 +1,10 @@
 let counterValue = 0;
 
 const buttonPlusOneEl = document.querySelector(
-  "button[data-action='incrementOne']"
+  "button[data-action='increment']"
 );
 const buttonMinusOneEl = document.querySelector(
-  "button[data-action='decrementOne']"
+  "button[data-action='decrement']"
 );
 
 const valueEl = document.querySelector("#value");
