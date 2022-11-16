@@ -9,15 +9,14 @@ const buttonMinusOneEl = document.querySelector(
 
 const valueEl = document.querySelector("#value");
 
-const decrementOne = () => {
+function onButtonMinusOneClick() {
   counterValue -= 1;
   valueEl.textContent = counterValue;
-};
-
-const incrementOne = () => {
+}
+function onButtonPlusOneClick() {
   counterValue += 1;
   valueEl.textContent = counterValue;
-};
+}
 
-buttonMinusOneEl.addEventListener("click", decrementOne);
-buttonPlusOneEl.addEventListener("click", incrementOne);
+buttonMinusOneEl.addEventListener("click", onButtonMinusOneClick);
+buttonPlusOneEl.addEventListener("click", onButtonPlusOneClick);
