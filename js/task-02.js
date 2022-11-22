@@ -7,26 +7,16 @@ const ingredients = [
   "Condiments",
 ];
 
-// Старий спосіб
-// const ingredientsListEl = document.querySelector("#ingredients");
-// const liArray = [];
+const ingridientsEl = document.querySelector("#ingredients");
 
-// ingredients.forEach((ingredient) => {
-//   const itemEl = document.createElement("li");
-//   itemEl.classList.add("item");
-//   itemEl.textContent = ingredient;
-//   liArray.push(itemEl);
-// });
+const ingridientsArray = [];
 
-// ingredientsEl.append(...liArray);
-
-// Новий спосіб
-const ingredientsListEl = document.querySelector("#ingredients");
-const ingredientsEl = ingredients.map((ingredient) => {
-  const itemEl = document.createElement("li");
-  itemEl.classList.add("item");
-  itemEl.textContent = ingredient;
-  return itemEl;
+ingredients.forEach((ingredient) => {
+  const ingridientEl = document.createElement("li");
+  ingridientEl.textContent = ingredient;
+  ingridientEl.classList.add = "item";
+  ingridientsArray.push(ingridientEl);
+  return ingridientsArray;
 });
 
-ingredientsListEl.append(...ingredientsEl);
+ingridientsEl.append(...ingridientsArray);

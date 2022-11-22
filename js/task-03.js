@@ -52,8 +52,6 @@ const images = [
 
 // galleryEl.insertAdjacentHTML("afterbegin", ...pictures);
 
-
-
 // 3. Варіант через шаблонний рядок
 
 const galleryEl = document.querySelector(".gallery");
