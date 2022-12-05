@@ -1,11 +1,14 @@
-const refsInput = document.querySelector("#controls>input");
-const refsButtonCreate = document.querySelector("[data-create]");
-const refsButtonDestroy = document.querySelector("[data-destroy]");
-const refsAddBoxes = document.querySelector("#boxes");
+const refs = {
+  input: document.querySelector("#controls>input"),
+  buttonCreate: document.querySelector("[data-create]"),
+  buttonDestroy: document.querySelector("[data-destroy]"),
+  addBoxes: document.querySelector("#boxes"),
+};
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
+
 function createBoxes(amount) {
   let elementsToAdd = [];
   for (let i = 0; i < amount; i += 1) {
@@ -21,19 +24,19 @@ function createBoxes(amount) {
   return elementsToAdd;
 }
 
-refsButtonCreate.addEventListener("click", (event) => {
-  if (refsInput.value > 100 || refsInput.value < 0) {
+refs.buttonCreate.addEventListener("click", (event) => {
+  if (refs.input.value > 100 || refs.input.value < 0) {
     alert("Insert number from 1 to 100");
   } else {
-    let addBoxes = createBoxes(refsInput.value);
-    refsAddBoxes.append(...addBoxes);
+    let addBoxes = createBoxes(refs.input.value);
+    refs.addBoxes.append(...addBoxes);
   }
 });
 
 const destroyBoxes = () => {
-  refsAddBoxes.innerHTML = "";
+  refs.addBoxes.innerHTML = "";
 };
 
-refsButtonDestroy.addEventListener("click", () => {
+refs.buttonDestroy.addEventListener("click", () => {
   destroyBoxes.call();
 });

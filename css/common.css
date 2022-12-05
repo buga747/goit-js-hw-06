@@ -38,3 +38,8 @@ li {
   width: 360px;
 
 }
+
+#boxes {
+  display: flex;
+  flex-wrap: wrap;
+}
